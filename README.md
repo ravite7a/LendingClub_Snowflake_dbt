@@ -172,13 +172,6 @@ dbt test
 | Tableau Public | Executive dashboard |
 | GitHub | Version control and portfolio hosting |
 
----
-
-## Interview Talking Points
-
-**Why a z-test instead of a t-test?** The outcome (payment made: yes/no) is a binary proportion, not a continuous variable. The two-proportion z-test is the correct test for comparing conversion rates between two groups.
-
-**What is a guardrail metric?** A secondary metric that monitors for harm. Even if the primary metric improves, the experiment fails if the guardrail worsens beyond a tolerance threshold. Here, we required that severe delinquency in the treatment group not exceed 5% above the control rate. Treatment actually improved on this metric.
 
 **What would you do if p-value came back at 0.06?** I would not ship the change. A result at 0.06 means roughly a 1 in 17 chance of a false positive, which is above the agreed threshold. The right call is to run the experiment longer to accumulate more statistical power, not to lower the bar.
 
